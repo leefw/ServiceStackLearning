@@ -1,10 +1,10 @@
 ﻿namespace FirstWebService
 {
-    using ServiceStack.ServiceHost;
+    using ServiceStack.ServiceInterface;
 
-    public class HelloService : IService<Hello>
+    public class HelloService : ServiceBase<Hello>
     {
-        public object Execute(Hello request)
+        protected override object Run(Hello request)
         {
             return new HelloResponse { Result = "Hello, " + request.Name };
         }
