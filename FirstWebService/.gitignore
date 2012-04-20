@@ -1,0 +1,5 @@
+_ReSharper.FirstWebService/
+bin/
+obj/
+*.suo
+*.user
