@@ -4,6 +4,8 @@ namespace FirstWebService
 {
     using Funq;
 
+    using ServiceStack.CacheAccess;
+    using ServiceStack.CacheAccess.Providers;
     using ServiceStack.WebHost.Endpoints;
 
     public class HelloAppHost : AppHostBase
@@ -16,6 +18,8 @@ namespace FirstWebService
         public override void Configure(Container container)
         {
             Routes.Add<Hello>("/hello").Add<Hello>("/hello/{Name}");
+
+            container.Register<ICacheClient>(new MemoryCacheClient());
         }
     }
 
