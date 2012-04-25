@@ -1,11 +1,12 @@
-﻿using System;
-
-namespace FirstWebService
+﻿namespace FirstWebService
 {
+    using System;
+
     using Funq;
 
     using ServiceStack.CacheAccess;
     using ServiceStack.CacheAccess.Providers;
+
     using ServiceStack.WebHost.Endpoints;
 
     public class HelloAppHost : AppHostBase
